@@ -1,1 +1,1 @@
-alanacostasite.github.io
+alanacosta.com
