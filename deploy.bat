@@ -1,7 +1,9 @@
 $ErrorActionPreference = 'SilentlyContinue'
 type nul >> "out/.nojekyll"
 @echo off
+cd out
 echo alanacosta.com> CNAME
+cd ..
 @echo on
 git add out/ 
 git commit -m "Deploy Next.js to remote"
