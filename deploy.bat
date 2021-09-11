@@ -1,5 +1,8 @@
 $ErrorActionPreference = 'SilentlyContinue'
 type nul >> "out/.nojekyll"
+@echo off
+echo alanacosta.com> CNAME
+@echo on
 git add out/ 
 git commit -m "Deploy Next.js to remote"
 git subtree split --prefix out -b gh-pages
