@@ -1,0 +1,9 @@
+Add to mailing list
+Connect on social media
+Listen page
+Upcoming events
+Bio
+
+Welcome page
+    Connect with Alan
+        Email sign up - Needs AWS infrastructure for subscribe and unsubscribe (maybe 3rd party)

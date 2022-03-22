@@ -1,3 +1,27 @@
+.backdropDark {
+  padding: 40px 0px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fafafa;
+  background: #121212;
+}
+
+.backdropLight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fafafa;
+}
+
+.backgroundImage {
+  width: calc(100% / 3);
+}
+
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
@@ -8,12 +32,44 @@
 }
 
 .main {
-  padding: 5rem 0;
   flex: 1;
+  position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+}
+
+.header {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;  
+  background: #121212e6;
+  border-radius: 1rem;
+  margin-top: 30px;
+}
+
+.header > h1 {
+  padding: 0 1.5rem;
+  font-family: "Raleway",Arial,sans-serif;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.header > h2 {
+  padding: 0 0.5rem;
+  font-family: "Raleway",Arial,sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 1.33rem;
+}
+
+.header > * > a:hover {
+  color: deepskyblue;
 }
 
 .title {
@@ -63,4 +119,14 @@
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
 }
