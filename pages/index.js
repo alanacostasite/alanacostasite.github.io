@@ -1,17 +1,13 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Header } from '../components/header.js'
+import { PageBody } from '../components/pageBody'
+import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <div>
+    <PageBody>
       <div className={styles.backdropLight}>
-        <Head>
-          <title>Alan Acosta</title>
-          <meta name="description" content="Alan Acosta - jazz saxophonist - jazz flute - live. connect. about. media. discography. contact." />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
         <div className={styles.row}>
           <img
             alt="Alan Shredding the Saxaphone"
@@ -29,14 +25,26 @@ export default function Home() {
             className={styles.backgroundImage}
           />
         </div>
-        <main className={styles.main}>
+        <div className={`${styles.section} ${styles.main}`}>
           <Header />
-        </main>
+        </div>
       </div>
-      <div className={styles.backdropDark}>
-        footer
+      <div className={`${styles.section} ${styles.backdropDark}`}>
+        <h2 className={styles.text}>Connect with Alan on</h2>
+        <div className={styles.row}>
+          <a href={"http://www.instagram.com/alanacosta_22/"}>
+            <FontAwesomeIcon icon={faInstagram} size="sm" />
+          </a>
+          <a href={"http://www.instagram.com/alanacosta_22/"}>
+            <FontAwesomeIcon icon={faTwitter} size="sm" />
+          </a>
+          <a href={"http://www.instagram.com/alanacosta_22/"}>
+            <FontAwesomeIcon icon={faFacebook} size="sm" style={{ fontSize: 10 }} />
+          </a>
+        </div>
+        <h2 className={styles.text}>Send bussiness inquiries to: <a href='mailto:alanemail@gmail.com'>alanemail@gmail.com</a></h2>
       </div>
-    </div>
+    </PageBody>
   )
 }
 

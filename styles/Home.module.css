@@ -1,5 +1,4 @@
 .backdropDark {
-  padding: 40px 0px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -15,7 +14,20 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  color: #fafafa;
+  color: #121212;
+  background: #fafafa;
+}
+
+.contentContainer {
+  box-sizing: border-box;
+  width: 100%;
+  margin: auto;
+  max-width: 1080px;
+  padding: 75px 34px;
+}
+
+.section {
+  padding: 30px 0px;
 }
 
 .backgroundImage {
@@ -45,15 +57,40 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;  
+  align-items: center;   
+  color: #fafafa;
+}
+
+.headerTransparentBackground {
   background: #121212e6;
   border-radius: 1rem;
-  margin-top: 30px;
+}
+
+.headerSolidBackground {
+  background: #121212;
+}
+
+.text {
+  font-family: "Raleway",Arial,sans-serif;
+}
+
+.text > h1 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.text > h2 {
+  font-weight: 100;
+  font-size: 1.33rem;
+}
+
+.text > p {
+  font-weight: 100;
+  font-size: 1rem;
 }
 
 .header > h1 {
   padding: 0 1.5rem;
-  font-family: "Raleway",Arial,sans-serif;
   letter-spacing: 0.1em;
   font-weight: 600;
   text-transform: uppercase;
@@ -72,6 +109,10 @@
   color: deepskyblue;
 }
 
+.row > a:hover {
+  color: deepskyblue;
+}
+
 .title {
   margin: 0;
   line-height: 1.15;
@@ -86,16 +127,6 @@
 .description {
   line-height: 1.5;
   font-size: 1.5rem;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 600px;
-  margin-top: 3rem;
-  flex-direction: column;
 }
 
 .card {
@@ -121,6 +152,28 @@
   line-height: 1.5;
 }
 
+.eventRow {
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid #cacaca;
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.eventRow h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.eventRow p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
 .col {
   display: flex;
   flex-direction: column;
@@ -129,4 +182,36 @@
 .row {
   display: flex;
   flex-direction: row;
+}
+
+.alignCenter {
+  display: flex;
+  align-items: center;
+}
+
+.spread {
+  justify-content: space-between;
+}
+
+.eventContainer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+.button {
+  padding: 0.5rem;
+  border-width: 2px;
+  border-style: solid;
+  background-color: transparent;
+  transition: 0.1s background-color linear, 0.1s color linear;
+  border-color: #121212;
+  cursor: pointer;
+  height: fit-content;
+  width: fit-content;
+}
+
+.button:hover {
+  background-color: #121212;
+  color: #fafafa;
 }
