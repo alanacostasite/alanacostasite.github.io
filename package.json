@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3053",
+    "dev": "next dev -p 3066",
     "test": "npm run build && npm run export",
     "build": "next build",
     "start": "next start",

@@ -34,6 +34,17 @@
   width: calc(100% / 3);
 }
 
+.foregroundImage {
+  width: 50%;
+  border-color: #cacaca;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.thumbnail {
+  height: 400px;
+}
+
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
@@ -214,4 +225,24 @@
 .button:hover {
   background-color: #121212;
   color: #fafafa;
+}
+
+.aboutTextContainer > p {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.photosContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-right: 15px;
+  padding-bottom: 15px;
 }

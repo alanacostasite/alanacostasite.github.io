@@ -29,7 +29,7 @@ export default function Home() {
           <Header />
         </div>
       </div>
-      <div className={`${styles.section} ${styles.backdropDark}`}>
+      <div id="connect" className={`${styles.section} ${styles.backdropDark}`}>
         <h2 className={styles.text}>Connect with Alan on</h2>
         <div className={styles.row}>
           <a href={"http://www.instagram.com/alanacosta_22/"}>
