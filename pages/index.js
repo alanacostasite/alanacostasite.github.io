@@ -6,6 +6,12 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
+    <div>
+      Website down for maintenance.
+    </div>
+  );
+  /*
+  return (
     <PageBody>
       <div className={styles.backdropLight}>
         <div className={styles.row}>
@@ -45,7 +51,7 @@ export default function Home() {
         <h2 className={styles.text}>Send bussiness inquiries to: <a href='mailto:alanemail@gmail.com'>alanemail@gmail.com</a></h2>
       </div>
     </PageBody>
-  )
+  )*/
 }
 
 
