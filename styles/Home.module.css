@@ -52,9 +52,7 @@
   border-width: 1px;
 }
 
-.thumbnail {
-  height: 400px;
-}
+
 
 .container {
   min-height: 100vh;
@@ -88,6 +86,10 @@
   color: #fafafa;
 }
 
+.thumbnail {
+  height: 400px;
+}
+
 @media screen and (min-width: 800px) {
   .hideLargeScreen {
     display: none;
@@ -101,6 +103,11 @@
 
   .text {
     font-size: 0.8rem;
+  }
+
+  .thumbnail {
+    height: auto;
+    max-width: 100%;
   }
 }
 

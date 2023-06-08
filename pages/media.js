@@ -23,7 +23,7 @@ function renderPhoto(photo, key) {
         <div className={styles.photo} key={key}>
             <img
                 alt={photo.alt}
-                src={`./${photo.thumbnail}`}
+                src={`./press/${photo.thumbnail}`}
                 className={styles.thumbnail}
                 style={{ float: "right" }}
             />

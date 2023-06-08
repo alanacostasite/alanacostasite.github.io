@@ -11,7 +11,7 @@ export default function Bio() {
                 <div className={styles.aboutTextContainer}>
                     <img
                         alt="Alan Helping a Student with their instrument"
-                        src="./FB_IMG_1590537248952.jpg"
+                        src="./press/FB_IMG_1590537248952.jpg"
                         className={styles.foregroundImage}
                         style={{ float: "right" }}
                     />
