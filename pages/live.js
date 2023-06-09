@@ -1,60 +1,54 @@
-import React from "react";
+import { useState } from 'react';
 import { Header } from "../components/header";
 import { PageBody } from "../components/pageBody";
-import styles from '../styles/Home.module.css'
+import { SideBar } from '../components/sidebar.js';
+import styles from '../styles/Home.module.css';
 const events = require('../editable_files/events.json');
 
-export default class Live extends React.Component {
+export default function Live() {
+    let [isSideBarShown, setSideBarShown] = useState(false);
+    let [viewUpcoming, setViewUpcoming] = useState(true);
 
-    constructor(props) {
-        super();
-        this.state = {
-            viewUpcoming: true
-        };
-    }
-    render() {
-        let pastEvents = [];
-        let upcomingEvents = [];
-        let now = Date.now();
-        events.forEach((event, i) => {
-            let renderedEvent = renderEvent(event, i);
-            if (now > getEventDate(event)) {
-                pastEvents.push(renderedEvent);
-            } else {
-                upcomingEvents.push(renderedEvent);
-            }
-        });
+    let pastEvents = [];
+    let upcomingEvents = [];
+    let now = Date.now();
+    events.forEach((event, i) => {
+        let renderedEvent = renderEvent(event, i);
+        if (now > getEventDate(event)) {
+            pastEvents.push(renderedEvent);
+        } else {
+            upcomingEvents.push(renderedEvent);
+        }
+    });
 
-        pastEvents = pastEvents.sort((a, b) => {
-            return getEventDate(a) < getEventDate(b);
-        });
+    pastEvents = pastEvents.sort((a, b) => {
+        return getEventDate(a) < getEventDate(b);
+    });
 
-        upcomingEvents = upcomingEvents.sort((a, b) => {
-            return getEventDate(a) > getEventDate(b);
-        });
+    upcomingEvents = upcomingEvents.sort((a, b) => {
+        return getEventDate(a) > getEventDate(b);
+    });
 
-        let viewType = this.state.viewUpcoming ? "Upcoming" : "Past";
-        let inverseViewType = this.state.viewUpcoming ? "Past" : "Upcoming";
-        let viewedEvents = this.state.viewUpcoming ? upcomingEvents : pastEvents;
-        return (
-            <PageBody>
-                <Header isSolidBackground={true} />
-                <div className={styles.backdropLight}>
-                    <div className={styles.contentContainer}>
-                        <div className={`${styles.row} ${styles.alignCenter} ${styles.spread}`}>
-                            <h2>{`${viewType} Concerts & Events`}</h2>
-                            <button className={`${styles.button} ${styles.text}`} onClick={() => this.setState((prevState) => ({
-                                viewUpcoming: !prevState.viewUpcoming
-                            }))}>{`${inverseViewType} Dates`}</button>
-                        </div>
-                        <div className={styles.eventContainer}>
-                            {viewedEvents}
-                        </div>
+    let viewType = viewUpcoming ? "Upcoming" : "Past";
+    let inverseViewType = viewUpcoming ? "Past" : "Upcoming";
+    let viewedEvents = viewUpcoming ? upcomingEvents : pastEvents;
+    return (
+        <PageBody>
+            <Header isSolidBackground={true} showSideBar={() => setSideBarShown(true)}/>
+            <div className={styles.backdropLight}>
+                <div className={styles.contentContainer}>
+                    <div className={`${styles.row} ${styles.alignCenter} ${styles.spread}`}>
+                        <h2>{`${viewType} Concerts & Events`}</h2>
+                        <button className={`${styles.button} ${styles.text}`} onClick={() => setViewUpcoming((prevState) => !prevState)}>{`${inverseViewType} Dates`}</button>
+                    </div>
+                    <div className={styles.eventContainer}>
+                        {viewedEvents}
                     </div>
                 </div>
-            </PageBody>
-        );
-    }
+            </div>
+            <SideBar show={isSideBarShown} hideSideBar={() => setSideBarShown(false)}></SideBar>
+        </PageBody>
+    );
 }
 
 function renderEvent(event, key) {

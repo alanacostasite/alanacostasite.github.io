@@ -1,6 +1,6 @@
 import { Header } from "../components/header";
 import { PageBody } from "../components/pageBody";
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from '../styles/Home.module.css';
 import { SideBar } from '../components/sidebar.js'
 const bio = require('../editable_files/bio.json');
@@ -25,7 +25,7 @@ export default function Bio() {
                         className={`${styles.foregroundImage} ${styles.hideSmallScreen}`}
                         style={{ float: "right" }}
                     />
-                    {bio.body.map((paragraph) => <p>{paragraph}</p>)}
+                    {bio.body.map((paragraph, idx) => <p key={idx}>{paragraph}</p>)}
                 </div>
             </div>
             <SideBar show={isSideBarShown} hideSideBar={() => setSideBarShown(false)}></SideBar>
