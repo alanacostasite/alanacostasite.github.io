@@ -32,17 +32,23 @@ export default function Live() {
     let viewType = viewUpcoming ? "Upcoming" : "Past";
     let inverseViewType = viewUpcoming ? "Past" : "Upcoming";
     let viewedEvents = viewUpcoming ? upcomingEvents : pastEvents;
+
+    let noEvents = viewedEvents.length === 0;
+
     return (
         <PageBody>
-            <Header isSolidBackground={true} showSideBar={() => setSideBarShown(true)}/>
+            <Header isSolidBackground={true} showSideBar={() => setSideBarShown(true)} />
             <div className={styles.backdropLight}>
                 <div className={styles.contentContainer}>
                     <div className={`${styles.row} ${styles.alignCenter} ${styles.spread}`}>
-                        <h2>{`${viewType} Concerts & Events`}</h2>
+                        <h2>{`${viewType} Events`}</h2>
                         <button className={`${styles.button} ${styles.text}`} onClick={() => setViewUpcoming((prevState) => !prevState)}>{`${inverseViewType} Dates`}</button>
                     </div>
                     <div className={styles.eventContainer}>
                         {viewedEvents}
+                        {noEvents ? <div>
+                            <i>{`No ${viewType} Events to Display`}</i>
+                        </div> : null}
                     </div>
                 </div>
             </div>
@@ -53,19 +59,25 @@ export default function Live() {
 
 function renderEvent(event, key) {
     let eventDate = getEventDate(event);
+    let header = event.eventLinkOptional ? (<h3><a className={styles.interactive} href={event.eventLinkOptional}>{event.name}</a></h3>) : (<h3>{event.name}</h3>);
+    let address = event.venueLinkOptional ? (<p><a className={styles.interactive} href={event.venueLinkOptional}>{`Address: ${event.location}`}</a></p>) : (<p>{`Address: ${event.location}`}</p>);
     return (
         <div className={styles.eventRow} key={key}>
-            <h3>{event.name}</h3>
+            {header}
             <p>{`${getDateString(eventDate)} @ ${getTimeString(eventDate)}`}</p>
-            <p>{`Address: ${event.location}`}</p>
+            {address}
             <p>{event.description}</p>
+            <div className={styles.row} style={{gap: 8, paddingTop: 8}}>
+                {event.eventLinkOptional ? <a href={event.eventLinkOptional}><button className={`${styles.button} ${styles.text}`}>Event</button></a> : null}
+                {event.venueLinkOptional ? <a href={event.venueLinkOptional}><button className={`${styles.button} ${styles.text}`}>Address</button></a> : null}
+            </div>
         </div>
     )
 }
 
 function getEventDate(event) {
     // Month and hours are zero indexed adjust for that here
-    return new Date(event.year, event.month - 1, event.day, event.hour + 1, event.minute);
+    return new Date(event.year, event.month - 1, event.day, event.hour, event.minute);
 }
 
 function getTimeString(date) {

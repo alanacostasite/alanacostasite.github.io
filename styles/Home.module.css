@@ -297,4 +297,8 @@
   .foregroundImage{
     width: 100%;
   }
+
+  .section {
+    padding: 0px 0px;
+  }
 }

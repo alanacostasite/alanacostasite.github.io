@@ -24,7 +24,7 @@ export default function Home() {
       </div>
       <div id="connect" className={`${styles.section} ${styles.backdropDark}`}>
         <h2 className={styles.text}>Connect with Alan on</h2>
-        <div className={styles.row} style={{gap: "1em"}}>
+        <div className={styles.row} style={{gap: "1em", height: "100%"}}>
           <IconContext.Provider value={{ size: 32 }}>
             <a href={"http://www.instagram.com/alanacosta_22/"}>
               <FaInstagram></FaInstagram>
