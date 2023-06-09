@@ -34,4 +34,27 @@ Install node https://nodejs.org/en/download
 
 
 ## Making changes quick steps
-1. "git
+1. "git pull" - Sync your local files with lastest version (must do this every time, IMPORTANT. This was not included in the instructions because it happens automatically as part of the clone)
+2. "npm run dev" - Test your changes locally
+3. ctrl + c - Cancel current command (will stop local server)
+4. "git commit -a" - Stage your local files to be pushed
+5. "git push" - Push your local files to the server (this allows Curt to see the in progress development but they are not live on the website yet)
+6. "npm run deploy" - Deploy last push to the live server, changes should be available in a few minutes
+
+## Editable files
+Non-obvious notes about the editable files
+
+### connection.json
+Any social media link you don't want to have just leave the quotes "" as empty and the icon will be hidden.
+
+## events.json
+eventLinkOptional and venueLinkOptional can be replaced with "" if you don't have a link to those locations and the buttons will be hidden
+
+The order of events put in here doesn't matter they will be sorted chrononlolically before being displayed
+
+## photos.json
+Any photo you want to appear on your media page needs to be inside the /public/press folder. Feel free to add new photos in here.
+The order the photos appear on the page is the order you list them in the file
+
+## bio.json
+The body section is a list of "" quotes, each quote becomes a new paragraph. Feel free to add more quotes or reduce the number in the list to change your paragraph breaks.
