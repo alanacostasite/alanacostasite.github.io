@@ -1,7 +1,7 @@
 import { Header } from "../components/header";
 import { PageBody } from "../components/pageBody";
 import styles from '../styles/Home.module.css';
-const photos = require('../media/photos.json');
+const photos = require('../editable_files/photos.json');
 
 export default function Media() {
     let renderedPhotos = photos.map((photo, i) => renderPhoto(photo, i));

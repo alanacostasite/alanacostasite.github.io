@@ -2,7 +2,7 @@ import React from "react";
 import { Header } from "../components/header";
 import { PageBody } from "../components/pageBody";
 import styles from '../styles/Home.module.css'
-const events = require('../media/events.json');
+const events = require('../editable_files/events.json');
 
 export default class Live extends React.Component {
 

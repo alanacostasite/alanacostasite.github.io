@@ -33,7 +33,7 @@
   width: 100%;
   margin: auto;
   max-width: 1080px;
-  padding: 75px 34px;
+  padding: 2em;
 }
 
 .section {
@@ -89,30 +89,6 @@
 .thumbnail {
   height: 400px;
 }
-
-@media screen and (min-width: 800px) {
-  .hideLargeScreen {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 800px) { 
-  .hideSmallScreen {
-    display: none;
-  }
-
-  .text {
-    font-size: 0.8rem;
-  }
-
-  .thumbnail {
-    height: auto;
-    max-width: 100%;
-  }
-}
-
-
-
 
 .headerTransparentBackground {
   background: #12121200;
@@ -294,3 +270,31 @@
   color: #fafafa;
 }
 
+@media screen and (min-width: 800px) {
+  .hideLargeScreen {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) { 
+  .hideSmallScreen {
+    display: none;
+  }
+
+  .text {
+    font-size: 0.8rem;
+  }
+
+  .thumbnail {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .contentContainer {
+    padding: 1em 2em;
+  }
+
+  .foregroundImage{
+    width: 100%;
+  }
+}
