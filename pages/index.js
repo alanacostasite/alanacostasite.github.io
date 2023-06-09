@@ -10,7 +10,7 @@ const connect = require('../editable_files/connect.json');
 export default function Home() {
   let [isSideBarShown, setSideBarShown] = useState(false);
   return (
-    <PageBody>
+    <PageBody backgroundColor="#121212">
       <div className={styles.backdropBlack}>
         <div className={styles.row}>
           <img
