@@ -1,9 +1,7 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link';
 import { IconContext } from "react-icons";
 import { FaBars } from 'react-icons/fa';
+import styles from '../styles/Home.module.css';
 
 export function Header(props) {
 

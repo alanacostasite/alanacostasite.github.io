@@ -2,39 +2,6 @@
 # yarn lockfile v1
 
 
-"@fortawesome/fontawesome-common-types@6.4.0":
-  "integrity" "sha512-HNii132xfomg5QVZw0HwXXpN22s7VBHQBv9CeOu9tfJnhsWQNd2lmTNi8CSrnw5B+5YOmzu1UoPAyxaXsJ6RgQ=="
-  "resolved" "https://registry.npmjs.org/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-6.4.0.tgz"
-  "version" "6.4.0"
-
-"@fortawesome/fontawesome-svg-core@^6.1.1", "@fortawesome/fontawesome-svg-core@~1 || ~6":
-  "integrity" "sha512-Bertv8xOiVELz5raB2FlXDPKt+m94MQ3JgDfsVbrqNpLU9+UE2E18GKjLKw+d3XbeYPqg1pzyQKGsrzbw+pPaw=="
-  "resolved" "https://registry.npmjs.org/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-6.4.0.tgz"
-  "version" "6.4.0"
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "6.4.0"
-
-"@fortawesome/free-brands-svg-icons@^6.1.1":
-  "integrity" "sha512-qvxTCo0FQ5k2N+VCXb/PZQ+QMhqRVM4OORiO6MXdG6bKolIojGU/srQ1ptvKk0JTbRgaJOfL2qMqGvBEZG7Z6g=="
-  "resolved" "https://registry.npmjs.org/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-6.4.0.tgz"
-  "version" "6.4.0"
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "6.4.0"
-
-"@fortawesome/free-solid-svg-icons@^6.1.1":
-  "integrity" "sha512-kutPeRGWm8V5dltFP1zGjQOEAzaLZj4StdQhWVZnfGFCvAPVvHh8qk5bRrU4KXnRRRNni5tKQI9PBAdI6MP8nQ=="
-  "resolved" "https://registry.npmjs.org/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-6.4.0.tgz"
-  "version" "6.4.0"
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "6.4.0"
-
-"@fortawesome/react-fontawesome@^0.1.18":
-  "integrity" "sha512-Hyb+lB8T18cvLNX0S3llz7PcSOAJMLwiVKBuuzwM/nI5uoBw+gQjnf9il0fR1C3DKOI5Kc79pkJ4/xB0Uw9aFQ=="
-  "resolved" "https://registry.npmjs.org/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.19.tgz"
-  "version" "0.1.19"
-  dependencies:
-    "prop-types" "^15.8.1"
-
 "@next/env@12.3.4":
   "integrity" "sha512-H/69Lc5Q02dq3o+dxxy5O/oNxFsZpdL6WREtOOtOM1B/weonIwDXkekr1KV5DPVPr12IHFPrMrcJQ6bgPMfn7A=="
   "resolved" "https://registry.npmjs.org/@next/env/-/env-12.3.4.tgz"
@@ -52,11 +19,6 @@
   dependencies:
     "tslib" "^2.4.0"
 
-"bootstrap-icons@^1.10.5":
-  "integrity" "sha512-oSX26F37V7QV7NCE53PPEL45d7EGXmBgHG3pDpZvcRaKVzWMqIRL9wcqJUyEha1esFtM3NJzvmxFXDxjJYD0jQ=="
-  "resolved" "https://registry.npmjs.org/bootstrap-icons/-/bootstrap-icons-1.10.5.tgz"
-  "version" "1.10.5"
-
 "caniuse-lite@^1.0.30001406":
   "integrity" "sha512-2efF8SAZwgAX1FJr87KWhvuJxnGJKOnctQa8xLOskAXNXq8oiuqgl6u1kk3fFpsp3GgvzlRjiK1sl63hNtFADw=="
   "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001492.tgz"
@@ -67,7 +29,7 @@
   "resolved" "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz"
   "version" "4.0.0"
 
-"loose-envify@^1.1.0", "loose-envify@^1.4.0":
+"loose-envify@^1.1.0":
   "integrity" "sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q=="
   "resolved" "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz"
   "version" "1.4.0"
@@ -124,15 +86,6 @@
     "picocolors" "^1.0.0"
     "source-map-js" "^1.0.2"
 
-"prop-types@^15.8.1":
-  "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
-  "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
-  "version" "15.8.1"
-  dependencies:
-    "loose-envify" "^1.4.0"
-    "object-assign" "^4.1.1"
-    "react-is" "^16.13.1"
-
 "react-dom@^17.0.2 || ^18.0.0-0", "react-dom@17.0.2":
   "integrity" "sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz"
@@ -147,12 +100,7 @@
   "resolved" "https://registry.npmjs.org/react-icons/-/react-icons-4.9.0.tgz"
   "version" "4.9.0"
 
-"react-is@^16.13.1":
-  "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
-  "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
-  "version" "16.13.1"
-
-"react@*", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17.0.2 || ^18.0.0-0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=16.x", "react@17.0.2":
+"react@*", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17.0.2 || ^18.0.0-0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
